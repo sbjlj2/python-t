@@ -4,16 +4,16 @@ b=random.randint(1,50)#随机获取一个数字并赋值于B
 print('猜数字游戏开始！')
 a=int(input('请输入数字：'))#键盘获取一个字符并转成int类型
 if a!=b :#判断a不能与b
-    counm = 0
-    while counm<10:
-        counm += 1
-        if(counm==10):
-            print('游戏结束，正确答案是：',b)
-            exit()
-        if a == b:
+    counm = 0  #定义一个计数器
+    while counm<10:#进入
+        counm += 1#循环自加1
+        if(counm==10):#判断counm等于10
+            print('游戏结束，正确答案是：',b)#输出字符串
+            exit()#退出
+        if a == b:#判断a等于b
             print('猜对了正确数字就是：', b)
             break
-        elif a<b:
+        elif a<b:#判断a<b
             print('你还有',10 - counm, '次机会')
             a = int(input('小了，请重新输入数字：'))
         elif a>b:
