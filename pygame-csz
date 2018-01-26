@@ -1,0 +1,23 @@
+import random #导入包
+b=random.randint(1,50)#随机获取一个数字并赋值于B
+#print(b)#隐藏打印B
+print('猜数字游戏开始！')
+a=int(input('请输入数字：'))#键盘获取一个字符并转成int类型
+if a!=b :#判断a不能与b
+    counm = 0
+    while counm<10:
+        counm += 1
+        if(counm==10):
+            print('游戏结束，正确答案是：',b)
+            exit()
+        if a == b:
+            print('猜对了正确数字就是：', b)
+            break
+        elif a<b:
+            print('你还有',10 - counm, '次机会')
+            a = int(input('小了，请重新输入数字：'))
+        elif a>b:
+            print('你还有',10 - counm, '次机会')
+            a = int(input('大了，请重新输入数字：'))
+elif (a==b):
+    print('猜对了正确数字就是：', b)
